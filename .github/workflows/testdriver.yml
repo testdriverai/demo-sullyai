@@ -15,7 +15,7 @@ jobs:
         with:
           key: ${{secrets.TESTDRIVER_API_KEY}}
           prompt: |
-            1. /run testdriver/testdriver.yml
+            1. /run testdriver/install_extension.yml
           prerun: |
             cd $env:TEMP
             npm init -y
@@ -25,4 +25,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           FORCE_COLOR: "3"
-          WEBSITE_URL: "https://example.com" # Define the website URL here
+          WEBSITE_URL: "https://chromewebstore.google.com/detail/sullyai/nkaadknkebgbbnkdgofjdppkhgfaegmf" # Define the website URL here
