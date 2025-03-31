@@ -1,0 +1,70 @@
+version: 4.2.25
+session: 67eaceff0310fe6c25bb47b6
+steps:
+  - prompt: click Add to chrome, then click Add extension in the popup
+    commands:
+      - command: hover-text
+        text: Add to Chrome
+        description: button to add the extension to Chrome
+        action: click
+      - command: wait
+        timeout: 2000
+      - command: hover-text
+        text: Add extension
+        description: button in the popup to confirm adding the extension
+        action: click
+  - prompt: click the puzzle piece extensions icon in the chrome toolbar
+    commands:
+      - command: hover-image
+        description: puzzle piece extensions icon in the Chrome toolbar
+        action: click
+  - prompt: click the pin image icon in the extensions popup
+    commands:
+      - command: hover-image
+        description: pin icon in the extensions popup
+        action: click
+  - prompt: >-
+      right click the sully.ai icon in the chrome toolbar, then select web view
+      permissions, and under Permissions select "Allow" for the Microphone
+    commands:
+      - command: hover-image
+        description: Sully.ai icon in the Chrome toolbar
+        action: right-click
+      - command: hover-text
+        text: View web permissions
+        description: option in the context menu
+        action: click
+      - command: hover-text
+        text: Microphone
+        description: microphone permission option
+        action: click
+      - command: press-keys
+        keys:
+          - tab
+      - command: press-keys
+        keys:
+          - enter
+      - command: hover-text
+        text: Allow
+        description: allow option for microphone permission
+        action: click
+  - prompt: ctrl + l and go to google.com
+    commands:
+      - command: press-keys
+        keys:
+          - control
+          - l
+      - command: type
+        text: google.com
+      - command: press-keys
+        keys:
+          - enter
+  - prompt: click the sully.ai icon in the extensions section of the chrome toolbar
+    commands:
+      - command: hover-image
+        description: Sully.ai icon in the Chrome toolbar
+        action: click
+  - prompt: assert that the sully.ai side panel is visible
+    commands:
+      - command: assert
+        expect: the Sully.ai side panel is visible
