@@ -23,6 +23,12 @@ steps:
       - command: hover-image
         description: pin icon in the extensions popup
         action: click
+  - prompt: click search extensions and themes
+    commands:
+      - command: hover-text
+        text: Search extensions and themes
+        description: search input field in the Chrome Web Store
+        action: click
   - prompt: >-
       right click the sully.ai icon in the chrome toolbar, then select web view
       permissions, and under Permissions select "Allow" for the Microphone
