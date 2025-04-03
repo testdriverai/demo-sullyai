@@ -13,6 +13,12 @@ steps:
         text: Add extension
         description: button in the popup to confirm adding the extension
         action: click
+  - prompt: click search extensions and themes
+    commands:
+      - command: hover-text
+        text: Search extensions and themes
+        description: search input field in the Chrome Web Store
+        action: click
   - prompt: click the puzzle piece extensions icon in the chrome toolbar
     commands:
       - command: hover-image
