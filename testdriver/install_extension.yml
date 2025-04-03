@@ -24,10 +24,10 @@ steps:
       - command: hover-image
         description: puzzle piece extensions icon in the Chrome toolbar
         action: click
-  - prompt: click the pin image icon in the extensions popup
+  - prompt: click the second down pin image icon in the extensions popup, the one next to sully.ai
     commands:
       - command: hover-image
-        description: pin icon in the extensions popup
+        description: sully.ai pin icon in the extensions popup
         action: click
   - prompt: ctrl + l and go to google.com
     commands:
